@@ -1,0 +1,107 @@
+/*clear default margin and padding*/
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+li{
+  list-style-type: none;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: white;
+}
+
+.logo{
+  background-color:#1c0d59;
+  padding-top: 10px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Start Navigation Bar */
+.navbar {
+  background-color: #25283D;
+  color: #ffffff;
+  border-radius: 4px;
+  max-width: 820px;
+  margin: 20px auto 0;
+}
+
+.main_menu{
+  display:flex;
+  flex-direction: column;
+}
+
+.main_menu a {
+  padding: 8px 10px;
+  display: block;
+  text-decoration: none;
+  color:white;
+}
+
+.submenu{
+  text-transform: uppercase;
+  background-color: #d6a32c;
+}
+
+.sub li:active {
+  background-color: #5263a5;
+}
+
+.sub li > a {
+  padding-left:24px;
+}
+
+.dropdown{
+  position: relative;
+}
+
+/*hide the submenu when not click on it*/
+.sub{
+  display:none;
+  width:100%;
+}
+
+/*add the classname to submenu once click on it*/
+.show{
+  display:block;
+}
+
+/*media query when screen larger than 480px*/
+@media only screen and (min-width: 480px) {
+
+  .main_menu{
+    flex-direction: row;
+    justify-content:space-between;
+  }
+
+/*hide the submenu*/
+  .sub{
+    display:none;
+    width:100%;
+    position:absolute;
+    background-color: #25283D;
+  }
+
+  .main_menu li{
+    position: relative;
+    flex:1 0 auto;
+    text-align: left;
+  }
+
+  /*add the show classname to submenu's class list so that menu will show once click*/
+  .show{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .logo{
+    display: none;
+  }
+}
+
+/* End Navigation Bar */

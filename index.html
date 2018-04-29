@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Navigation Menu</title>
+		<link rel="stylesheet" type="text/css" href="css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="templates/normalize.css"/>
+	</head>
+
+	<body>
+
+
+      <nav class="navbar">
+
+				<div class="logo">
+					<p>Menu</p>
+				</div>
+
+
+        <ul class="main_menu ">
+
+          <li class="dropdown">
+						<!--send the submenu's special classname as the argument to invoke method to
+						open specific sub-menu-->
+            <a href="#" class="submenu" onclick="dropDown('.locations')">locations</a>
+            <ul class="sub locations">
+                <li>
+                  <a href="#">Darwin</a>
+                </li>
+                <li>
+                  <a href="#">Palmerston</a>
+                </li>
+                <li>
+                  <a href="#">Katherine</a>
+                </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="submenu" onclick="dropDown('.about')">about</a>
+            <ul class="sub about">
+                <li>
+                  <a href="#">history</a>
+                </li>
+                <li>
+                  <a href="#">team</a>
+                </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="submenu" onclick="dropDown('.media')">media</a>
+            <ul class="sub media">
+                <li>
+                  <a href="#">blog</a>
+                </li>
+                <li>
+                  <a href="#">photo gallery</a>
+                </li>
+                <li>
+                  <a href="#">reports</a>
+                </li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+    <script src="js/menu.js"></script>
+	</body>
+</html>
